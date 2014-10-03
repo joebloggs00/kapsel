@@ -1,0 +1,16 @@
+{
+  "generation": [
+    {
+      "templateName": "SAPUI5 Mobile Kapsel App Project",
+      "templateVersion": "1.0.1",
+      "dateTimeStamp": "Thu, 02 Oct 2014 10:38:42 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  }
+}
