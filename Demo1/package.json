@@ -1,0 +1,27 @@
+{
+  "name": "PODemo",
+  "version": "0.0.1",
+  "main": "www/Application.js",
+  "repository": {
+      "type": "git",
+      "url": "https://git.neo.ondemand.com/i062387sapdev/podemo"
+  },
+  "private": true,
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "SAP Singapore",
+  "keywords": [
+    "cordova"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-init": "~0.3.2",
+    "grunt-shell": "0.2.x",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+	"grunt-prompt": "~1.1.0",
+	"xml2js": "~0.4.4"
+  }
+}
