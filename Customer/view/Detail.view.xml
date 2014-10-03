@@ -1,0 +1,58 @@
+<mvc:View 
+	controllerName="Customer.view.Detail"
+	xmlns="sap.m" 
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page 
+		title="{i18n>DETAIL_TITLE}"
+		class="sapUiFioriObjectPage"  
+		showNavButton="{device>/isPhone}" 
+		navButtonPress="handleNavButtonPress">
+	
+		<ObjectHeader id="header"
+			 title="{GivenName}"
+			 number="{ID}"
+			numberUnit="">
+			
+			<customData>
+                <core:CustomData key="sapDtResourcePath" value="Customers"></core:CustomData>
+            </customData>
+			
+			<attributes>
+				<ObjectAttribute text="{i18n>DETAIL_TEXT}" />
+			</attributes>
+		</ObjectHeader>
+		
+		<IconTabBar 
+			expanded="{device>/isNoPhone}" >
+			<customData>
+                <core:CustomData key="sapDtResourcePath" value="Customers"></core:CustomData>
+            </customData>
+			<items>
+				<IconTabFilter id="iconTabFilter"
+					icon="sap-icon://hint">
+					<form:SimpleForm
+						layout="ResponsiveGridLayout"
+						minWidth="1024" >
+						<core:Title text="More Details" />
+						<Label id="label1" text="Street"/>
+						<Text id="text1" text="{Street}" />
+						<Label id="label2" text="City"/>
+						<Text id="text2" text="{City}" />
+						<Label id="label3" text="PostalCode"/>
+						<Text id="text3" text="{PostalCode}" />
+					</form:SimpleForm>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+		
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button id="actionButton" icon="sap-icon://action" press="openActionSheet"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

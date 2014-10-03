@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices m:DataServiceVersion="1.0"
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+        xmlns:sap="http://www.sap.com/Protocols/SAPData"
+        xmlns:ux="http://www.sap.com/Protocols/OData4SAP/UX"
+        xmlns:gp="http://www.sap.com/Protocols/SAPData/GenericPlayer">
+        <Schema Namespace="ODataSalesOrders"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Customers">
+                <Key>
+                    <PropertyRef Name="ID"></PropertyRef>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"></Property>
+                <Property Name="Surname" Type="Edm.String" Nullable="false" MaxLength="20"></Property>
+                <Property Name="GivenName" Type="Edm.String" Nullable="false" MaxLength="20"></Property>
+                <Property Name="Street" Type="Edm.String" Nullable="false" MaxLength="30"></Property>
+                <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="20"></Property>
+                <Property Name="State" Type="Edm.String" MaxLength="16"></Property>
+                <Property Name="Country" Type="Edm.String" MaxLength="16"></Property>
+                <Property Name="PostalCode" Type="Edm.String" MaxLength="10"></Property>
+                <Property Name="Phone" Type="Edm.String" Nullable="false" MaxLength="13"></Property>
+                <Property Name="CompanyName" Type="Edm.String" MaxLength="32"></Property>
+            </EntityType>
+            <EntityType Name="SalesOrders">
+                <Key>
+                    <PropertyRef Name="ID"></PropertyRef>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"></Property>
+                <Property Name="CustomerID" Type="Edm.Int32" Nullable="false"></Property>
+                <Property Name="OrderDate" Type="Edm.DateTime" Nullable="false" Precision="6"></Property>
+                <Property Name="FinancialCode" Type="Edm.String" MaxLength="2"></Property>
+                <Property Name="Region" Type="Edm.String" MaxLength="7"></Property>
+                <Property Name="SalesRepresentative" Type="Edm.Int32" Nullable="false"></Property>
+            </EntityType>
+            <EntityType Name="SalesOrderItems">
+                <Key>
+                    <PropertyRef Name="ID"></PropertyRef>
+                    <PropertyRef Name="LineID"></PropertyRef>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"></Property>
+                <Property Name="LineID" Type="Edm.Int16" Nullable="false"></Property>
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false"></Property>
+                <Property Name="ShipDate" Type="Edm.DateTime" Nullable="false" Precision="6"></Property>
+            </EntityType>
+            <EntityType Name="Products">
+                <Key>
+                    <PropertyRef Name="ID"></PropertyRef>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"></Property>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="15"></Property>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="30"></Property>
+                <Property Name="Size" Type="Edm.String" Nullable="false" MaxLength="18"></Property>
+                <Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="18"></Property>
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false"></Property>
+                <Property Name="UnitPrice" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2"></Property>
+                <Property Name="Photo" Type="Edm.Binary" MaxLength="2147483647"></Property>
+            </EntityType>
+            <EntityContainer Name="ODataSalesOrders_Container" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Customers" EntityType="ODataSalesOrders.Customers"></EntitySet>
+                <EntitySet Name="SalesOrders" EntityType="ODataSalesOrders.SalesOrders"></EntitySet>
+                <EntitySet Name="SalesOrderItems" EntityType="ODataSalesOrders.SalesOrderItems"></EntitySet>
+                <EntitySet Name="Products" EntityType="ODataSalesOrders.Products"></EntitySet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
