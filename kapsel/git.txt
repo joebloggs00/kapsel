@@ -1,0 +1,10 @@
+cd\
+git config --global user.name "joebloggs00"
+git config --global user.email "dennisrichards00@hotmail.com"
+touch README.md
+git add README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/joebloggs00/kapsel.git
+git push -u origin master
