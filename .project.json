@@ -1,0 +1,19 @@
+{
+  "generation": [
+    {
+      "templateName": "SAP Fiori Starter Application",
+      "templateVersion": "1.0.0",
+      "dateTimeStamp": "Thu, 02 Oct 2014 10:33:15 GMT"
+    }
+  ],
+  "mockpreview": {
+    "loadJSONFiles": false
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  }
+}
