@@ -1,0 +1,27 @@
+npm -v
+node -v
+npm uninstall -g cordova
+npm cache clean
+npm install -g cordova@3.5.0-0.2.7
+cd\
+cd kapsel
+md kapsel
+cd kapsel
+cordova -d create C:\Kapsel\LogonDemo com.mycompany.logon LogonDemo "{\"plugin_search_path\":\"C:/SAP/MobileSDK3/KapselSDK/plugins/\"}"
+C:\SAP\MobileSDK3\KapselSDK\cli
+cd C:\SAP\MobileSDK3\KapselSDK\cli
+npm install -g
+cd kapsel
+cd#
+cd\
+cd kapsel
+cd logondemo
+cordova -d platform add android
+cordova -d plugin add com.sap.mp.cordova.plugins.logon
+cordova -d plugin add org.apache.cordova.console
+cordova plugins
+doskey history
+doskey -history
+doskey /help
+doskey /?
+doskey /history > c:\kapsel\myfile.txt
